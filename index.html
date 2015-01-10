@@ -7,22 +7,26 @@
 	<link rel="stylesheet" href="">
 </head>
 <body>
+	<section ng-controller="ctrlOtros">
+		<h3>{{title}}</h3>
+				<ul>
+					<li ng-repeat="val in studenList">{{val.nombre}} : <strong>{{val.apellido}}</strong></li>
+				</ul>
+	</section>
 	<section ng-controller="ctrlMisDatos">
-		<h1>{{title}}</h1>
-	<form action="index_submit" method="get">
-		<input type="text" ng-model="nombre">
-		<span>{{nombre}}</span>
-		<ul>
-			<li ng-repeat="person in personList">{{person.name}} : <strong>{{person.lastname}}</strong>
-			</li>
-		</ul>
-		<ul>
-			<li ng-repeat="(key, value) in studenList">{{value.name}}</li>
-		</ul>
-	</form>
+				<h1>{{title}}</h1>
+			<form action="index_submit" method="get">
+				<input type="text" ng-model="nombre">
+				<span>{{nombre}}</span>
+				<ul>
+					<li ng-repeat="person in personList">{{person.name}} : <strong>{{person.lastname}}</strong>
+					</li>
+				</ul>
+			</form>
 	</section>
 <script src="js/ejemploApp.js"></script>
 <script src="js/controllers/ctrlMisDatos.js"></script>
+<script src="js/controllers/ctrlOtros.js"></script>
 <script src="js/directives/drvModal.js"></script>
 <script src="js/providers/pvrEfx.js"></script>
 <script src="js/services/svrPersona.js"></script>

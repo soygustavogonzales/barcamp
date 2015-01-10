@@ -15,4 +15,8 @@
 					lastname:"Yoyo"
 				}
 			]
-	}])
+	}]);
+
+
+
+ejemploApp.value('variable', "Soy Golfields")
